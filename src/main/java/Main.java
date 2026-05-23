@@ -16,6 +16,17 @@ public class Main {
                     System.out.println(input.substring(5));
 
                 }
+                else if (input.startsWith("type "))
+                {
+                    if (input.substring(5).equals("echo") || input.substring(5).equals("exit") || input.substring(5).equals("type"))
+                    {
+                        System.out.println(input+" is built in command");
+                    }              
+                    else 
+                    {
+                        System.out.println(input + ": command not found");
+                    }                         
+                }
                 else 
                 {
                     System.out.println(input + ": command not found");
