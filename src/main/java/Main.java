@@ -20,7 +20,7 @@ public class Main {
                 {
                     if (input.substring(5).equals("echo") || input.substring(5).equals("exit") || input.substring(5).equals("type"))
                     {
-                        System.out.println(input+" is built in command");
+                        System.out.println(input+" is a shell builtin");
                     }              
                     else 
                     {
