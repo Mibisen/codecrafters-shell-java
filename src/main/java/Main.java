@@ -1,3 +1,6 @@
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Scanner;
 
 public class Main {
@@ -24,8 +27,18 @@ public class Main {
                     }              
                     else 
                     {
+                        Path path = FileSystems.getDefault().getPath("/bin/" + input.substring(5));
+                        System.out.println(path);
+                        if(Files.isExecutable(path))
+                        {
+                            System.out.println(input.substring(5) + " is " + path);
+                        }
+                        else
+
+
                         System.out.println(input.substring(5) + ": not found");
-                    }                         
+                    }      
+                                       
                 }
                 else 
                 {
